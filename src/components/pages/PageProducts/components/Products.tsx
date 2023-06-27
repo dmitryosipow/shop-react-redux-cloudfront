@@ -15,6 +15,8 @@ export default function Products() {
     return <Typography>Loading...</Typography>;
   }
 
+  console.log(data);
+
   return (
     <Grid container spacing={4}>
       {/* eslint-disable-next-line @typescript-eslint/no-unused-vars */}
