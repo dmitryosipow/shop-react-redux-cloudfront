@@ -15,7 +15,7 @@ export default function Products() {
     return <Typography>Loading...</Typography>;
   }
 
-  console.log(data);
+  //console.log(data);
 
   return (
     <Grid container spacing={4}>
