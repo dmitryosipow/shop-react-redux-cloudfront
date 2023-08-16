@@ -8,8 +8,10 @@ export function useAvailableProducts() {
   return useQuery<AvailableProduct[], AxiosError>(
     "available-products",
     async () => {
+      const credentials = JSON.parse(localStorage.getItem("creds") || "{}");
       const res = await axios.get<AvailableProduct[]>(
-        `${API_PATHS.bff}/products`
+        `${API_PATHS.bff}/products`,
+        { headers: { Authorization: credentials?.id_token } }
       );
       return res.data;
     }

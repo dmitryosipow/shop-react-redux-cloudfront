@@ -6,6 +6,8 @@ import PageOrder from "~/components/pages/PageOrder/PageOrder";
 import PageProductImport from "~/components/pages/admin/PageProductImport/PageProductImport";
 import PageCart from "~/components/pages/PageCart/PageCart";
 import PageProducts from "~/components/pages/PageProducts/PageProducts";
+import Login from "~/components/pages/login/Login";
+import Callback from "~/components/pages/Callback";
 import { Typography } from "@mui/material";
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
     <MainLayout>
       <Routes>
         <Route path="/" element={<PageProducts />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/callback" element={<Callback />} />
         <Route path="cart" element={<PageCart />} />
         <Route path="admin/orders">
           <Route index element={<PageOrders />} />
